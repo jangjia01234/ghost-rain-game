@@ -9,11 +9,17 @@ body {
   font-family: "Silkscreen", cursive;
 }
 
-.bar_upside {
+.bar_upside_wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.bar_upside {
+  position: fixed;
   font-size: 30px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .bar_upside_left {
@@ -26,8 +32,6 @@ body {
 }
 
 .bar_upside_title {
-  /* font-family: "Nabla", cursive; */
-  /* font-family: "Silkscreen", cursive; */
   font-size: 50px;
 }
 
@@ -54,13 +58,33 @@ body {
 }
 
 .game_main_wrap {
-  margin: 0 auto;
+  position: relative;
 }
 
 .bg_image {
-  display: flex;
-  justify-content: center;
-  width: 90vw;
-  height: 90vh;
+  width: 800px;
+  height: 600px;
   margin: 0 auto;
+  background: url("./images/bg.png") no-repeat;
+  background-size: cover;
+}
+
+.hero {
+  width: 35px;
+  height: 54px;
+  background: url("./images/hero.png") no-repeat;
+  position: absolute;
+  top: 50px;
+}
+
+.hero.stop {
+  background-position: 0px 0px;
+}
+
+.hero.right {
+  background-position: -105px 0px;
+}
+
+.hero.left {
+  background-position: -70px 0px;
 }
