@@ -13,31 +13,70 @@
         controls
         loop
         style="display: none"
+        muted
       >
         <source src="./audio/Arcade_Kid.mp3" />
       </audio>
     </div>
-    <!-- <div class="bar_upside">
-      <div class="bar_upside_wrap">
-        <div class="bar_upside_left">
-          <img src="./images/timer.png" />
-          <span>27</span>
-        </div>
-        <div class="bar_upside_title">3</div>
-        <div class="bar_upside_right">
-          <img src="./images/hearts.png" class="icon_heart" />
-          <button class="icon_sOn"><img src="./images/sound_on.svg" /></button>
-          <button class="icon_sOff">
-            <img src="./images/sound_off.svg" />
-          </button>
+    <header>
+      <div class="bar_upside">
+        <div class="bar_upside_wrap">
+          <div class="bar_upside_left">
+            <img src="./images/timer.png" />
+            <span>27</span>
+          </div>
+          <div class="bar_upside_title">3</div>
+          <div class="bar_upside_right">
+            <img src="./images/hearts.png" class="icon_heart" />
+            <button class="icon_sOn">
+              <img src="./images/sound_on.svg" />
+            </button>
+            <button class="icon_sOff">
+              <img src="./images/sound_off.svg" />
+            </button>
+          </div>
         </div>
       </div>
-    </div> -->
+    </header>
+
+    <!--
     <div class="game_main">
-      <div class="game_main_wrap">
-        <div class="bg_image"></div>
+      <div class="bg_image"></div>
+    </div> -->
+
+    <div class="switch">
+      <div class="body">
+        <div class="volume"></div>
+        <div class="screen"></div>
+      </div>
+      <div class="joy-con left">
+        <div class="button-group">
+          <div class="button arrow up"></div>
+          <div class="button arrow right"></div>
+          <div class="button arrow down"></div>
+          <div class="button arrow left"></div>
+        </div>
+
+        <div class="stick"></div>
+        <div class="select"></div>
+        <div class="capture"></div>
+        <div class="shoulder l"></div>
+      </div>
+
+      <div class="joy-con right">
+        <div class="button-group">
+          <div class="button letter" data-letter="X"></div>
+          <div class="button letter" data-letter="A"></div>
+          <div class="button letter" data-letter="B"></div>
+          <div class="button letter" data-letter="Y"></div>
+        </div>
+        <div class="stick"></div>
+        <div class="start"></div>
+        <a class="home" href="/"></a>
+        <div class="shoulder r"></div>
       </div>
     </div>
+
     <script src="js/settings.js"></script>
     <script src="js/ghost.js"></script>
     <script src="js/hero.js"></script>

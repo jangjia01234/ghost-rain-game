@@ -1,9 +1,9 @@
 const heroElement = document.createElement("div");
-const bgElement = document.querySelector(".bg_image");
+const bgElement = document.querySelector(".screen");
 
 heroElement.style.position = "absolute";
 heroElement.style.bottom = "0";
-heroElement.style.left = "48%"; // 35px 더 가 있으니.. 50%는 조금 오른쪽인듯
+heroElement.style.left = "45%"; // 35px 더 가 있으니.. 50%는 조금 오른쪽인듯
 
 heroElement.style.width = HERO_WIDTH + "px";
 heroElement.style.height = HERO_HEIGHT + "px";
@@ -15,7 +15,8 @@ document.addEventListener("keydown", function (e) {
   let key = e.key || e.keyCode;
 
   let heroLeft = getComputedStyle(heroElement).left;
-  let heroLeftNum = heroLeft.split("px")[0];
+  // 아래 Number() 중요! split 까지만 하면 문자열이라 숫자 처리 해야함!
+  let heroLeftNum = Number(heroLeft.split("px")[0]);
 
   if (key === "ArrowLeft" || key === 37) {
     heroElement.style.backgroundPosition = "-70px";
@@ -23,6 +24,13 @@ document.addEventListener("keydown", function (e) {
   } else if (key === "ArrowRight" || key === 39) {
     heroElement.style.backgroundPosition = "-105px";
     heroElement.style.left = heroLeftNum + 10 + "px";
+  } else if (heroLeft < 0 && (key === "ArrowLeft" || key === 37)) {
+    heroElement.style.left = 0;
+  } else if (
+    heroLeft > BG_WIDTH - HERO_WIDTH &&
+    (key === "ArrowRight" || key === 39)
+  ) {
+    heroElement.style.left = 0;
   }
 });
 
