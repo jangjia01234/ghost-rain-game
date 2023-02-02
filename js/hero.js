@@ -12,11 +12,13 @@ heroElement.style.background = 'url("./images/hero.png") no-repeat';
 bgElement.appendChild(heroElement);
 
 document.addEventListener("keydown", function (e) {
-  if (e.key === "ArrowLeft") {
+  let key = e.key || e.keyCode;
+
+  if (key === "ArrowLeft" || key === 37) {
     heroElement.style.backgroundPosition = "-70px";
-  } else if (e.key === "ArrowRight") {
+  } else if (key === "ArrowRight" || key === 39) {
     heroElement.style.backgroundPosition = "-105px";
-  } else if (e.key === "ArrowDown") {
+  } else if (key === "ArrowDown" || key === 30) {
     heroElement.style.backgroundPosition = "-35px";
   } else {
     heroElement.style.backgroundPosition = "0";
