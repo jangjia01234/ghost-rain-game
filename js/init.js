@@ -3,8 +3,7 @@
 const timerElement = document.createElement("span");
 const barElement = document.querySelector(".bar_upside_left");
 timerElement.className = "timer";
-
-// timerElement.innerText = 4;
+timerElement.style.fontFamily = '"Silkscreen", cursive';
 
 barElement.appendChild(timerElement);
 
@@ -15,6 +14,6 @@ let timeCounter = setInterval(function () {
 
   if (time < 0) {
     clearInterval(timeCounter);
-    document.querySelector(".timer").innerHTML = "시간초과";
+    document.querySelector(".timer").innerText = "☠️";
   }
 }, 1000);
