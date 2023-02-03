@@ -13,16 +13,13 @@ function createGhost() {
 
   bgElementGhost.appendChild(ghostElement);
 
-  //   setInterval(function () {
-  //     // 1. ghost 요소 접근
-  //     // 2. ghost 의 top 값 가져오기
-  //     // 3. top 값 숫자 추출, 1 + px
-  //     // 4. 다시 할당 (배경 넘어가면 멈춤)
-  //     // top = 394 = 480(bg height) - 32(border height) - 54(ghost height)
-
-  //     let ghostTopLocation = Number(ghostElement.style.top.split("px")[0]);
-  //     return ghostTopLocation + 10;
-  //   }, 1000);
+  setInterval(function () {
+    // 1. ghost 요소 접근 -> createGhost() 함수 안에 setInterval 넣음으로써 해결
+    // 2. ghost 의 top 가져오기 -> 숫자 추출 -> + 1
+    // 3. 증가한 값 top 에 재할당
+    let ghostTopNum = Number(ghostElement.style.top.split("px")[0]) + 10;
+    ghostElement.style.top = ghostTopNum + "px";
+  }, 100);
 }
 
 createGhost();
