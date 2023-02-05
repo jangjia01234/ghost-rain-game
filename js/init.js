@@ -7,7 +7,7 @@ timerElement.style.fontFamily = '"Silkscreen", cursive';
 
 barElement.appendChild(timerElement);
 
-let time = 3;
+let time = 30;
 
 let timeCounter = setInterval(function () {
   timerElement.innerText = time--;
