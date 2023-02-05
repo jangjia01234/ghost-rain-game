@@ -31,7 +31,7 @@ function createGhost() {
     // ghost 죽이는 액션 구현하기
     // 1. 유령과 용사가 겹치는 위치 찾기 (top, left)
     // 2. 접촉하면 죽은 유령의 이미지로 변경하기
-    // 3. 3초 뒤에 유령 element 삭제하기 (setTimeout) -> 왜 필요하지?
+    // 3. 3초 뒤에 유령 element 삭제하기 (setTimeout)
 
     let ghostLeftNum = Number(ghostElement.style.left.split("px")[0]);
     let heroLeftNum = Number(heroElement.style.left.split("px")[0]);
