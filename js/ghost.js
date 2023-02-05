@@ -25,12 +25,13 @@ function createGhost() {
     }
 
     ghostElement.style.top = ghostTopNum + "px";
+    // if문 먼저 작성 -> ghostTopNum이 완성된 후에 px 붙여야 정상적으로 실행됨
   }, 100);
 }
 
 createGhost();
 
 function randomNum() {
-  let randomLeft = Math.floor(Math.random() * 627); // 627 = 768(bg width) - 48*2(좌우 border width*2) - 45(ghost width)
+  let randomLeft = Math.floor(Math.random() * (BG_WIDTH - GHOST_WIDTH));
   return randomLeft;
 }
