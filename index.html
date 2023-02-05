@@ -6,18 +6,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="music">
-      <audio
-        class="audioContainer"
-        autoplay
-        controls
-        loop
-        style="display: none"
-        muted
-      >
-        <source src="./audio/Arcade_Kid.mp3" />
-      </audio>
-    </div>
     <header>
       <div class="bar_upside">
         <div class="bar_upside_wrap">
@@ -26,13 +14,12 @@
           </div>
           <div class="bar_upside_title">👻3</div>
           <div class="bar_upside_right">
-            <img src="./images/hearts.png" class="icon_heart" />
-            <button class="icon_sOn">
-              <img src="./images/sound_on.svg" />
-            </button>
-            <button class="icon_sOff">
-              <img src="./images/sound_off.svg" />
-            </button>
+            <span class="icon_heart"></span>
+            <!-- <audio class="audioContainer" autoplay controls loop>
+              <source src="./audio/Arcade_Kid.mp3" />
+            </audio> -->
+            <span class="icon_volume_off"></span>
+            <span class="icon_volume_on"></span>
           </div>
         </div>
       </div>

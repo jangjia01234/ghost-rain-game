@@ -1,8 +1,18 @@
 // const audioContainer = document.querySelector(".audioContainer");
-// const stopBtn = document.querySelector(".icon_soundOff");
+var audio = new Audio("./audio/Arcade_Kid.mp3");
+audio.loop = true;
+audio.volume = 0.5;
+audio.play();
 
-// function stopAudio() {
-//   audioContainer.pause();
-// }
+let audioOffBtn = document.querySelector(".icon_volume_off");
 
-// stopBtn.addEventListener("click", stopAudio);
+let audioOnBtn = document.querySelector(".icon_volume_on");
+
+audioOffBtn.addEventListener("click", function () {
+  audio.pause();
+  audioOffBtn.style.display = "none";
+  audioOnBtn.style.display = "block";
+  audioOnBtn.addEventListener("click", function () {
+    audio.play();
+  });
+});

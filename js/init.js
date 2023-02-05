@@ -7,14 +7,18 @@ timerElement.style.fontFamily = '"Silkscreen", cursive';
 
 barElement.appendChild(timerElement);
 
-let time = 30;
+let time = 3;
 
 let timeCounter = setInterval(function () {
   timerElement.innerText = time--;
 
   if (time < 0) {
     clearInterval(timeCounter);
-    document.querySelector(".timer").innerText = "☠️";
+    timerElement.style.color = "transparent";
+    timerElement.style.background = 'url("./images/giphy") no-repeat';
+    timerElement.style.width = "35px";
+    timerElement.style.height = "35px";
+    timerElement.style.backgroundSize = "cover";
   }
 }, 1000);
 
