@@ -15,7 +15,7 @@ let timeCounter = setInterval(function () {
   if (time < 0) {
     clearInterval(timeCounter);
     timerElement.style.color = "transparent";
-    timerElement.style.background = 'url("./images/giphy") no-repeat';
+    timerElement.style.background = 'url("./images/giphy.gif") no-repeat';
     timerElement.style.width = "35px";
     timerElement.style.height = "35px";
     timerElement.style.backgroundSize = "cover";
