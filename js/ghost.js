@@ -21,75 +21,41 @@ function createGhost() {
 
     // 배경보다 넘어가면 움직이지 않게 멈추기
     if (ghostTopNum > BG_HEIGHT - GHOST_HEIGHT + 10) {
-      return; // 10px씩 이동하므로 마지막에 10px 띄우고 멈춤 -> 10 더해줌으로써 수정
+      // 10px씩 이동하므로 마지막에 10px 띄우고 멈춤 -> 10 더해줌으로써 수정
+      ghostElement.remove();
     }
 
     ghostElement.style.top = ghostTopNum + "px";
     // if문 먼저 작성 -> ghostTopNum이 완성된 후에 px 붙여야 정상적으로 실행됨
+
+    // ghost 죽은 모습 구현하기
+    // left가 서로 겹치면 죽인 후에 setTimeOut으로 3초 뒤에 remove() 시키기
+
+    // --------
+
+    // 접촉하는 순간 유령의 top 위치 -> ghostTopNum - GHOST-HEIGHT
+    // 유령과 용사가 겹치는 left 위치 ->
+    // 왼쪽 겹침: ghostLeftNum + GHOST-WIDTH >= heroLeftNum
+    // 오른쪽 겹침: heroLeftNum + HERO-WIDTH >= ghostLeftNum
+
+    let ghostLeftNum = Number(ghostElement.style.left.split("px")[0]);
+    let heroLeftNum = Number(heroElement.style.left.split("px")[0]);
+
+    if (BG_HEIGHT - ghostTopNum < HERO_HEIGHT + GHOST_HEIGHT) {
+      if (
+        heroLeftNum < ghostLeftNum + GHOST_WIDTH &&
+        ghostLeftNum < heroLeftNum
+      )
+        ghostElement.style.backgroundPosition = "-45px";
+    }
   }, 100);
 }
 
 createGhost();
 
-function createAnotherGhost() {
-  const newGhostElement = document.createElement("div");
-  newGhostElement.className = "ghost_element";
-  const newBgElementGhost = document.querySelector(".screen");
-
-  newGhostElement.style.position = "absolute";
-  newGhostElement.style.top = "-40px";
-  newGhostElement.style.left = randomLeftNum() + "px";
-
-  newGhostElement.style.width = GHOST_WIDTH + "px";
-  newGhostElement.style.height = GHOST_HEIGHT + "px";
-  newGhostElement.style.background = 'url("./images/ghost.png") no-repeat';
-
-  newBgElementGhost.appendChild(newGhostElement);
-
-  setInterval(function () {
-    let newGhostTopNum = Number(newGhostElement.style.top.split("px")[0]) + 10;
-    if (newGhostTopNum > BG_HEIGHT - GHOST_HEIGHT + 10) {
-      return;
-    }
-    newGhostElement.style.top = newGhostTopNum + "px";
-  }, 100);
-}
-
-createAnotherGhost();
-
-function createLastGhost() {
-  const lastGhostElement = document.createElement("div");
-  lastGhostElement.className = "ghost_element";
-  const lastBgElementGhost = document.querySelector(".screen");
-
-  lastGhostElement.style.position = "absolute";
-  lastGhostElement.style.top = "-80px";
-  lastGhostElement.style.left = randomLeftNum() + "px";
-
-  lastGhostElement.style.width = GHOST_WIDTH + "px";
-  lastGhostElement.style.height = GHOST_HEIGHT + "px";
-  lastGhostElement.style.background = 'url("./images/ghost.png") no-repeat';
-
-  lastBgElementGhost.appendChild(lastGhostElement);
-
-  setInterval(function () {
-    let lastGhostTopNum =
-      Number(lastGhostElement.style.top.split("px")[0]) + 10;
-    if (lastGhostTopNum > BG_HEIGHT - GHOST_HEIGHT + 10) {
-      return;
-    }
-    lastGhostElement.style.top = lastGhostTopNum + "px";
-  }, 100);
-}
-
-createLastGhost();
+setInterval(createGhost, 2000);
 
 function randomLeftNum() {
   let randomLeft = Math.floor(Math.random() * (BG_WIDTH - GHOST_WIDTH));
   return randomLeft;
-}
-
-function randomTopNum() {
-  let randomTop = Math.floor(Math.random() * (BG_HEIGHT - GHOST_HEIGHT));
-  return randomTop;
 }
