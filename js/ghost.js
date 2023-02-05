@@ -28,15 +28,10 @@ function createGhost() {
     ghostElement.style.top = ghostTopNum + "px";
     // if문 먼저 작성 -> ghostTopNum이 완성된 후에 px 붙여야 정상적으로 실행됨
 
-    // ghost 죽은 모습 구현하기
-    // left가 서로 겹치면 죽인 후에 setTimeOut으로 3초 뒤에 remove() 시키기
-
-    // --------
-
-    // 접촉하는 순간 유령의 top 위치 -> ghostTopNum - GHOST-HEIGHT
-    // 유령과 용사가 겹치는 left 위치 ->
-    // 왼쪽 겹침: ghostLeftNum + GHOST-WIDTH >= heroLeftNum
-    // 오른쪽 겹침: heroLeftNum + HERO-WIDTH >= ghostLeftNum
+    // ghost 죽이는 액션 구현하기
+    // 1. 유령과 용사가 겹치는 위치 찾기 (top, left)
+    // 2. 접촉하면 죽은 유령의 이미지로 변경하기
+    // 3. 3초 뒤에 유령 element 삭제하기 (setTimeout) -> 왜 필요하지?
 
     let ghostLeftNum = Number(ghostElement.style.left.split("px")[0]);
     let heroLeftNum = Number(heroElement.style.left.split("px")[0]);
@@ -45,8 +40,12 @@ function createGhost() {
       if (
         heroLeftNum < ghostLeftNum + GHOST_WIDTH &&
         ghostLeftNum < heroLeftNum
-      )
+      ) {
         ghostElement.style.backgroundPosition = "-45px";
+        setTimeout(function () {
+          ghostElement.remove();
+        }, 200);
+      }
     }
   }, 100);
 }
