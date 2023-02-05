@@ -58,18 +58,6 @@
   height: 20px;
 }
 
-/* audio::-webkit-media-controls-panel {
-  background-color: #eee;
-}
-
-audio::-webkit-media-controls-current-time-display,
-::-webkit-media-controls-time-remaining-display,
-::-webkit-media-controls-timeline-container,
-::-webkit-media-controls-timeline,
-::-webkit-media-controls-toggle-closed-captions-button {
-  display: none;
-} */
-
 /* switch set */
 
 html {
