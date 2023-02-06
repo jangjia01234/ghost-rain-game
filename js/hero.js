@@ -15,7 +15,7 @@ document.addEventListener("keydown", function (e) {
   let key = e.key || e.keyCode;
 
   let heroLeft = getComputedStyle(heroElement).left;
-  // 아래 Number() 중요! split 까지만 하면 문자열이라 숫자 처리 해야함!
+  // 아래 Number() 중요! split 까지만 하면 문자열이라 숫자 처리 해야함
   let heroLeftNum = Number(heroLeft.split("px")[0]);
 
   if (key === "ArrowLeft" || key === 37) {

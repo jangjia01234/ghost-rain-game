@@ -1,3 +1,88 @@
+// start screen
+
+const startScreen = document.createElement("div");
+startScreen.className = "start-screen";
+const bgElementStart = document.querySelector(".screen");
+
+bgElementStart.style.display = "flex";
+bgElementStart.style.justifyContent = "center";
+
+startScreen.style.position = "absolute";
+startScreen.style.width = "100%";
+startScreen.style.height = "100%";
+startScreen.style.background =
+  'url("https://media2.giphy.com/media/NKEt9elQ5cR68/giphy.gif?cid=ecf05e47rh1dbp4ydpdpnyi25f85xrqaty9vw7xns8vawi2a&rid=giphy.gif&ct=g") no-repeat';
+startScreen.style.backgroundSize = "cover";
+startScreen.style.filter = "brightness(60%)";
+startScreen.style.zIndex = "1";
+
+bgElementStart.appendChild(startScreen);
+
+const startScreenText = document.createElement("h1");
+startScreenText.className = "start-screen-text";
+startScreenText.innerHTML = "GHOST RAIN";
+startScreenText.style.marginTop = "15%";
+startScreenText.style.color = "#eee";
+startScreenText.style.zIndex = "2";
+
+bgElementStart.appendChild(startScreenText);
+
+const startScreenBtn = document.createElement("button");
+startScreenBtn.className = "start-screen-btn";
+
+startScreenBtn.innerHTML = "START";
+startScreenBtn.style.position = "absolute";
+startScreenBtn.style.width = "25%";
+startScreenBtn.style.height = "16%";
+
+startScreenBtn.style.marginTop = "35%";
+startScreenBtn.style.fontFamily = "Silkscreen, cursive";
+startScreenBtn.style.fontSize = "25px";
+startScreenBtn.style.textAlign = "center";
+startScreenBtn.style.backgroundColor = "#C600CA";
+startScreenBtn.style.color = "#F2CDF6";
+startScreenBtn.style.borderRadius = "15px";
+startScreenBtn.style.zIndex = "2";
+
+bgElementStart.appendChild(startScreenBtn);
+
+function startScreenAction() {
+  startScreen.style.display = "none";
+  startScreenText.style.display = "none";
+  startScreenBtn.style.display = "none";
+}
+
+startScreenBtn.addEventListener("click", startScreenAction);
+
+// timer
+
+const timerElement = document.createElement("span");
+const barElement = document.querySelector(".bar_upside_left");
+
+timerElement.className = "timer";
+timerElement.style.fontFamily = '"Silkscreen", cursive';
+
+barElement.appendChild(timerElement);
+
+function timerAction() {
+  let time = 30;
+
+  let timeCounter = setInterval(function () {
+    timerElement.innerText = time--;
+
+    if (time < 0) {
+      clearInterval(timeCounter);
+      timerElement.style.color = "transparent";
+      timerElement.style.background = 'url("./images/giphy.gif") no-repeat';
+      timerElement.style.width = "35px";
+      timerElement.style.height = "35px";
+      timerElement.style.backgroundSize = "cover";
+    }
+  }, 1000);
+}
+
+startScreenBtn.addEventListener("click", timerAction);
+
 // upside bar style
 
 const barUpsideWrapElement = document.querySelector(".bar_upside_wrap");
@@ -67,7 +152,8 @@ screenElement.style.boxSizing = "content-box";
 screenElement.style.position = "relative";
 screenElement.style.width = "21em";
 screenElement.style.height = "13em";
-screenElement.style.background = 'url("./images/bg.png") no-repeat';
+screenElement.style.background =
+  'url("https://media3.giphy.com/media/TRebCjNbc4dIA/giphy.gif?cid=ecf05e47mlycqx6oqkqntjx4eytz7f61dnx6u28fytomg106&rid=giphy.gif&ct=g") no-repeat';
 screenElement.style.backgroundSize = "cover";
 screenElement.style.border = "1em solid #000";
 screenElement.style.borderLeftWidth = "1.5em";
