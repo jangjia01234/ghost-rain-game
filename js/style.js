@@ -43,3 +43,23 @@ screenElement.style.borderLeftWidth = "1.5em";
 screenElement.style.borderRightWidth = "1.5em";
 screenElement.style.borderRadius = "0.375em";
 screenElement.style.overflow = "hidden";
+
+const captureElement = document.querySelector(".capture");
+captureElement.style.position = "absolute";
+captureElement.style.bottom = "2.875em";
+captureElement.style.right = "0.8125em";
+captureElement.style.width = "0.6875em";
+captureElement.style.height = "0.6875em";
+captureElement.style.backgroundColor = "#444";
+captureElement.style.borderRadius = "0.09375em";
+captureElement.style.cursor = "pointer";
+
+const homeElement = document.querySelector(".home");
+homeElement.style.position = "absolute";
+homeElement.style.bottom = "2.8125em";
+homeElement.style.left = "0.75em";
+homeElement.style.width = "0.875em";
+homeElement.style.height = "0.875em";
+homeElement.style.backgroundColor = "#444";
+homeElement.style.borderRadius = "50%";
+homeElement.style.cursor = "pointer";
