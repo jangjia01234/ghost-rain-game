@@ -22,15 +22,58 @@ timerImgElement.style.width = "30px";
 const barUpsideTitleElement = document.querySelector(".bar_upside_title");
 barUpsideTitleElement.style.fontSize = "50px";
 
-const barUpsideRightElement = document.querySelector(" .bar_upside_right");
+const barUpsideRightElement = document.querySelector(".bar_upside_right");
 barUpsideRightElement.style.display = "flex";
 barUpsideRightElement.style.alignItems = "center";
+barUpsideRightElement.style.cursor = "pointer";
 
-// const heartIconElement = document.querySelector(".icon_heart");
-// heartIconElement.style.height = "100%";
-// heartIconElement.style.background = 'url("./images/hearts.png) no-repeat';
-// heartIconElement.style.width = "100px";
-// heartIconElement.style.height = "20px";
+// left
+
+const FirstLeftBtnElement = document.querySelector(".button-left:nth-child(1)");
+FirstLeftBtnElement.style.top = "0";
+FirstLeftBtnElement.style.left = "50%";
+
+const SecondLeftBtnElement = document.querySelector(
+  ".button-left:nth-child(2)"
+);
+SecondLeftBtnElement.style.top = "50%";
+SecondLeftBtnElement.style.right = "0";
+
+const ThirdLeftBtnElement = document.querySelector(".button-left:nth-child(3)");
+ThirdLeftBtnElement.style.bottom = "0";
+ThirdLeftBtnElement.style.left = "50%";
+
+const FourthLeftBtnElement = document.querySelector(
+  ".button-left:nth-child(4)"
+);
+FourthLeftBtnElement.style.top = "50%";
+FourthLeftBtnElement.style.left = "0";
+
+/// right
+
+const FirstRightBtnElement = document.querySelector(
+  ".button-right:nth-child(1)"
+);
+FirstRightBtnElement.style.top = "0";
+FirstRightBtnElement.style.left = "50%";
+
+const SecondRightBtnElement = document.querySelector(
+  ".button-right:nth-child(2)"
+);
+SecondRightBtnElement.style.top = "50%";
+SecondRightBtnElement.style.right = "0";
+
+const ThirdRightBtnElement = document.querySelector(
+  ".button-right:nth-child(3)"
+);
+ThirdRightBtnElement.style.bottom = "0";
+ThirdRightBtnElement.style.left = "50%";
+
+const FourthRightBtnElement = document.querySelector(
+  ".button-right:nth-child(4)"
+);
+FourthRightBtnElement.style.top = "50%";
+FourthRightBtnElement.style.left = "0";
 
 // switch style
 
