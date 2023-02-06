@@ -60,11 +60,6 @@
 
 /* switch set */
 
-html {
-  box-sizing: border-box;
-  font-family: "Silkscreen", cursive;
-}
-
 *,
 *::before,
 *::after {
