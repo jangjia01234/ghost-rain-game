@@ -2,38 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
 
-.bar_upside_wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bar_upside {
-  position: fixed;
-  top: 20px;
-  font-size: 30px;
-  width: 100%;
-  padding: 0 40px 0 40px;
-}
-
-.bar_upside_left {
-  display: flex;
-  align-items: center;
-}
-
-.bar_upside_left img {
-  width: 30px;
-}
-
-.bar_upside_title {
-  font-size: 50px;
-}
-
-.bar_upside_right {
-  display: flex;
-  align-items: center;
-}
-
 .bar_upside_right span:hover {
   cursor: pointer;
 }

@@ -1,3 +1,39 @@
+// upside bar style
+
+const barUpsideWrapElement = document.querySelector(".bar_upside_wrap");
+barUpsideWrapElement.style.display = "flex";
+barUpsideWrapElement.style.justifyContent = "space-between";
+barUpsideWrapElement.style.alignItems = "center";
+
+const barUpsideElement = document.querySelector(".bar_upside");
+barUpsideElement.style.position = "fixed";
+barUpsideElement.style.top = "20px";
+barUpsideElement.style.fontSize = "30px";
+barUpsideElement.style.width = "100%";
+barUpsideElement.style.padding = "0 40px 0 40px";
+
+const barUpsideLeftElement = document.querySelector(".bar_upside_left");
+barUpsideLeftElement.style.display = "flex";
+barUpsideLeftElement.style.alignItems = "center";
+
+const timerImgElement = document.querySelector(".timer-img");
+timerImgElement.style.width = "30px";
+
+const barUpsideTitleElement = document.querySelector(".bar_upside_title");
+barUpsideTitleElement.style.fontSize = "50px";
+
+const barUpsideRightElement = document.querySelector(" .bar_upside_right");
+barUpsideRightElement.style.display = "flex";
+barUpsideRightElement.style.alignItems = "center";
+
+// const heartIconElement = document.querySelector(".icon_heart");
+// heartIconElement.style.height = "100%";
+// heartIconElement.style.background = 'url("./images/hearts.png) no-repeat';
+// heartIconElement.style.width = "100px";
+// heartIconElement.style.height = "20px";
+
+// switch style
+
 const htmlElement = document.querySelector("html");
 htmlElement.style.boxSizing = "border-box";
 htmlElement.style.fontFamily = "Silkscreen, cursive";
