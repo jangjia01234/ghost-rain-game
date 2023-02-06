@@ -2,7 +2,7 @@ let audioOffBtn = document.querySelector(".icon_volume_off");
 let audioOnBtn = document.querySelector(".icon_volume_on");
 
 audioOnBtn.addEventListener("click", function () {
-  var audio = new Audio("./audio/Arcade_Kid.mp3");
+  var audio = new Audio("./audio/Tropical_Thunder.mp3");
   audio.loop = true;
   audio.volume = 0.5;
   audio.play();

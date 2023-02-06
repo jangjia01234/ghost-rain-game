@@ -30,14 +30,14 @@ bgElementStart.appendChild(startScreenText);
 const startScreenBtn = document.createElement("button");
 startScreenBtn.className = "start-screen-btn";
 
-startScreenBtn.innerHTML = "START";
+startScreenBtn.innerHTML = "PRESS START";
 startScreenBtn.style.position = "absolute";
-startScreenBtn.style.width = "25%";
-startScreenBtn.style.height = "16%";
+startScreenBtn.style.width = "30%";
+startScreenBtn.style.height = "15%";
 
 startScreenBtn.style.marginTop = "35%";
 startScreenBtn.style.fontFamily = "Silkscreen, cursive";
-startScreenBtn.style.fontSize = "25px";
+startScreenBtn.style.fontSize = "20px";
 startScreenBtn.style.textAlign = "center";
 startScreenBtn.style.backgroundColor = "#C600CA";
 startScreenBtn.style.color = "#F2CDF6";
@@ -65,7 +65,7 @@ timerElement.style.fontFamily = '"Silkscreen", cursive';
 barElement.appendChild(timerElement);
 
 function timerAction() {
-  let time = 30;
+  let time = 10;
 
   let timeCounter = setInterval(function () {
     timerElement.innerText = time--;
@@ -77,6 +77,31 @@ function timerAction() {
       timerElement.style.width = "35px";
       timerElement.style.height = "35px";
       timerElement.style.backgroundSize = "cover";
+
+      bgElementStart.style.backgroundColor = "black";
+      startScreen.style.display = "block";
+      startScreen.style.background =
+        'url("https://media1.giphy.com/media/Vd8V1PpBe1Jr3SNP1d/giphy.gif?cid=ecf05e47lsruk49n2nz0csfje8apmwf5d3iujcpxdt48pd4j&rid=giphy.gif&ct=g") no-repeat';
+      startScreen.style.backgroundSize = "cover";
+      startScreen.style.backgroundPosition = "-40px";
+
+      //   const endScreenText = document.createElement("h1");
+
+      //   endScreenText.innerHTML = "GAME OVER";
+      //   endScreenText.style.marginTop = "20%";
+      //   endScreenText.style.color = "#eee";
+      //   endScreenText.style.zIndex = "3";
+
+      //   bgElementStart.appendChild(endScreenText);
+
+      //   const startScreenText = document.createElement("h1");
+      //   startScreenText.className = "start-screen-text";
+      //   startScreenText.innerHTML = "GHOST RAIN";
+      //   startScreenText.style.marginTop = "15%";
+      //   startScreenText.style.color = "#eee";
+      //   startScreenText.style.zIndex = "2";
+
+      //   bgElementStart.appendChild(startScreenText);
     }
   }, 1000);
 }
