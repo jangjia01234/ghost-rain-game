@@ -16,3 +16,7 @@
 ## End
 ![image 48](https://user-images.githubusercontent.com/71865277/216992906-6f46bf1e-e7f1-4af5-91a7-850f0c3e18ba.png)
 
+# Todo
+
+- 상단 중앙에 게임중 사용자가 죽인 유령의 수를 표시할 예정입니다.
+- 수명을 줄이는 요소를 추가하여 부딪힐 경우 우상단의 하트가 줄어들도록 구현할 예정입니다.
