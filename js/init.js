@@ -1,9 +1,5 @@
 // 여기에 공통 코드 작성
 
-const htmlElement = document.querySelector("html");
-htmlElement.style.boxSizing = "border-box";
-htmlElement.style.fontFamily = "Silkscreen, cursive";
-
 // timer
 const timerElement = document.createElement("span");
 const barElement = document.querySelector(".bar_upside_left");
