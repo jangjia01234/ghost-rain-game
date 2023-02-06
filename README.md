@@ -1,4 +1,5 @@
 # pixel-game 🎮
+- 배포 링크: https://ghost-rain-game.vercel.app/
 
 # Demo
 
