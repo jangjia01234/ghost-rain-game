@@ -148,21 +148,36 @@ FourthRightBtnElement.style.left = "0";
 const shoulderLeft = document.querySelector(".shoulder.l");
 const shoulderRight = document.querySelector(".shoulder.r");
 
-function shoulderAction() {
+shoulderLeft.style.top = "-0.125em";
+shoulderLeft.style.right = "-0.125em";
+
+shoulderRight.style.top = "-0.125em";
+shoulderRight.style.right = "-0.125em";
+
+function shoulderLeftAction() {
   shoulderLeft.style.top = "-0.0625em";
   shoulderLeft.style.left = "-0.0625em";
+}
 
+function shoulderRightAction() {
   shoulderRight.style.top = "-0.0625em";
   shoulderRight.style.right = "-0.0625em";
 }
 
-function shoulderActionCancel() {
+function shoulderLeftActionCancel() {
   shoulderLeft.style.top = "-0.125em";
   shoulderLeft.style.left = "-0.125em";
+}
 
+function shoulderRightActionCancel() {
   shoulderRight.style.top = "-0.125em";
   shoulderRight.style.right = "-0.125em";
 }
 
-shoulderRight.addEventListener("mousedown", shoulderAction);
-shoulderRight.addEventListener("mouseup", shoulderActionCancel);
+shoulderLeft.addEventListener("mousedown", shoulderLeftAction);
+shoulderLeft.addEventListener("mouseup", shoulderLeftActionCancel);
+
+shoulderRight.addEventListener("mousedown", shoulderRightAction);
+shoulderRight.addEventListener("mouseup", shoulderRightActionCancel);
+
+// 양쪽이 동시에 움직이는 문제 해결 필요
