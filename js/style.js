@@ -42,6 +42,7 @@ startScreenBtn.style.textAlign = "center";
 startScreenBtn.style.backgroundColor = "#C600CA";
 startScreenBtn.style.color = "#F2CDF6";
 startScreenBtn.style.borderRadius = "15px";
+startScreenBtn.style.cursor = "pointer";
 startScreenBtn.style.zIndex = "2";
 
 bgElementStart.appendChild(startScreenBtn);
@@ -60,20 +61,19 @@ const timerElement = document.createElement("span");
 const barElement = document.querySelector(".bar_upside_left");
 
 timerElement.className = "timer";
-timerElement.style.fontFamily = '"Silkscreen", cursive';
+timerElement.style.fontFamily = "Silkscreen, cursive";
 
 barElement.appendChild(timerElement);
 
 function timerAction() {
-  let time = 10;
+  let time = 15;
 
   let timeCounter = setInterval(function () {
     timerElement.innerText = time--;
 
     if (time < 0) {
       clearInterval(timeCounter);
-      timerElement.style.color = "transparent";
-      timerElement.style.background = 'url("./images/giphy.gif") no-repeat';
+      timerElement.innerHTML = "TIMEOUT";
       timerElement.style.width = "35px";
       timerElement.style.height = "35px";
       timerElement.style.backgroundSize = "cover";
@@ -101,7 +101,7 @@ barUpsideWrapElement.style.color = "white";
 const barUpsideElement = document.querySelector(".bar_upside");
 barUpsideElement.style.position = "fixed";
 barUpsideElement.style.top = "20px";
-barUpsideElement.style.fontSize = "30px";
+barUpsideElement.style.fontSize = "25px";
 barUpsideElement.style.width = "100%";
 barUpsideElement.style.padding = "0 40px 0 40px";
 
