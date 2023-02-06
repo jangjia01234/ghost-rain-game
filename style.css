@@ -471,7 +471,7 @@
 }
 
 .shoulder.l {
-  left: -0.125em;
+  /* left: -0.125em; */
   background-image: radial-gradient(
       circle at 3em 0.125em,
       rgba(15, 15, 15, 1) 0.125em,
@@ -490,13 +490,8 @@
     );
 }
 
-.shoulder.l:active {
-  top: -0.0625em;
-  left: -0.0625em;
-}
-
 .shoulder.r {
-  right: -0.125em;
+  /* right: -0.125em; */
   background-image: radial-gradient(
       circle at 2.5em 0.125em,
       rgba(15, 15, 15, 1) 0.125em,
@@ -515,7 +510,12 @@
     );
 }
 
+/* .shoulder.l:active {
+  top: -0.0625em;
+  left: -0.0625em;
+}
+
 .shoulder.r:active {
   top: -0.0625em;
   right: -0.0625em;
-}
+} */

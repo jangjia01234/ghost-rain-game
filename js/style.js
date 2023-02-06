@@ -27,54 +27,6 @@ barUpsideRightElement.style.display = "flex";
 barUpsideRightElement.style.alignItems = "center";
 barUpsideRightElement.style.cursor = "pointer";
 
-// left
-
-const FirstLeftBtnElement = document.querySelector(".button-left:nth-child(1)");
-FirstLeftBtnElement.style.top = "0";
-FirstLeftBtnElement.style.left = "50%";
-
-const SecondLeftBtnElement = document.querySelector(
-  ".button-left:nth-child(2)"
-);
-SecondLeftBtnElement.style.top = "50%";
-SecondLeftBtnElement.style.right = "0";
-
-const ThirdLeftBtnElement = document.querySelector(".button-left:nth-child(3)");
-ThirdLeftBtnElement.style.bottom = "0";
-ThirdLeftBtnElement.style.left = "50%";
-
-const FourthLeftBtnElement = document.querySelector(
-  ".button-left:nth-child(4)"
-);
-FourthLeftBtnElement.style.top = "50%";
-FourthLeftBtnElement.style.left = "0";
-
-/// right
-
-const FirstRightBtnElement = document.querySelector(
-  ".button-right:nth-child(1)"
-);
-FirstRightBtnElement.style.top = "0";
-FirstRightBtnElement.style.left = "50%";
-
-const SecondRightBtnElement = document.querySelector(
-  ".button-right:nth-child(2)"
-);
-SecondRightBtnElement.style.top = "50%";
-SecondRightBtnElement.style.right = "0";
-
-const ThirdRightBtnElement = document.querySelector(
-  ".button-right:nth-child(3)"
-);
-ThirdRightBtnElement.style.bottom = "0";
-ThirdRightBtnElement.style.left = "50%";
-
-const FourthRightBtnElement = document.querySelector(
-  ".button-right:nth-child(4)"
-);
-FourthRightBtnElement.style.top = "50%";
-FourthRightBtnElement.style.left = "0";
-
 // switch style
 
 const htmlElement = document.querySelector("html");
@@ -142,3 +94,75 @@ homeElement.style.height = "0.875em";
 homeElement.style.backgroundColor = "#444";
 homeElement.style.borderRadius = "50%";
 homeElement.style.cursor = "pointer";
+
+// left btn
+
+const FirstLeftBtnElement = document.querySelector(".button-left:nth-child(1)");
+FirstLeftBtnElement.style.top = "0";
+FirstLeftBtnElement.style.left = "50%";
+
+const SecondLeftBtnElement = document.querySelector(
+  ".button-left:nth-child(2)"
+);
+SecondLeftBtnElement.style.top = "50%";
+SecondLeftBtnElement.style.right = "0";
+
+const ThirdLeftBtnElement = document.querySelector(".button-left:nth-child(3)");
+ThirdLeftBtnElement.style.bottom = "0";
+ThirdLeftBtnElement.style.left = "50%";
+
+const FourthLeftBtnElement = document.querySelector(
+  ".button-left:nth-child(4)"
+);
+FourthLeftBtnElement.style.top = "50%";
+FourthLeftBtnElement.style.left = "0";
+
+/// right btn
+
+const FirstRightBtnElement = document.querySelector(
+  ".button-right:nth-child(1)"
+);
+FirstRightBtnElement.style.top = "0";
+FirstRightBtnElement.style.left = "50%";
+
+const SecondRightBtnElement = document.querySelector(
+  ".button-right:nth-child(2)"
+);
+SecondRightBtnElement.style.top = "50%";
+SecondRightBtnElement.style.right = "0";
+
+const ThirdRightBtnElement = document.querySelector(
+  ".button-right:nth-child(3)"
+);
+ThirdRightBtnElement.style.bottom = "0";
+ThirdRightBtnElement.style.left = "50%";
+
+const FourthRightBtnElement = document.querySelector(
+  ".button-right:nth-child(4)"
+);
+FourthRightBtnElement.style.top = "50%";
+FourthRightBtnElement.style.left = "0";
+
+// shoulder
+
+const shoulderLeft = document.querySelector(".shoulder.l");
+const shoulderRight = document.querySelector(".shoulder.r");
+
+function shoulderAction() {
+  shoulderLeft.style.top = "-0.0625em";
+  shoulderLeft.style.left = "-0.0625em";
+
+  shoulderRight.style.top = "-0.0625em";
+  shoulderRight.style.right = "-0.0625em";
+}
+
+function shoulderActionCancel() {
+  shoulderLeft.style.top = "-0.125em";
+  shoulderLeft.style.left = "-0.125em";
+
+  shoulderRight.style.top = "-0.125em";
+  shoulderRight.style.right = "-0.125em";
+}
+
+shoulderRight.addEventListener("mousedown", shoulderAction);
+shoulderRight.addEventListener("mouseup", shoulderActionCancel);
