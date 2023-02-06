@@ -84,24 +84,6 @@ function timerAction() {
         'url("https://media1.giphy.com/media/Vd8V1PpBe1Jr3SNP1d/giphy.gif?cid=ecf05e47lsruk49n2nz0csfje8apmwf5d3iujcpxdt48pd4j&rid=giphy.gif&ct=g") no-repeat';
       startScreen.style.backgroundSize = "cover";
       startScreen.style.backgroundPosition = "-40px";
-
-      //   const endScreenText = document.createElement("h1");
-
-      //   endScreenText.innerHTML = "GAME OVER";
-      //   endScreenText.style.marginTop = "20%";
-      //   endScreenText.style.color = "#eee";
-      //   endScreenText.style.zIndex = "3";
-
-      //   bgElementStart.appendChild(endScreenText);
-
-      //   const startScreenText = document.createElement("h1");
-      //   startScreenText.className = "start-screen-text";
-      //   startScreenText.innerHTML = "GHOST RAIN";
-      //   startScreenText.style.marginTop = "15%";
-      //   startScreenText.style.color = "#eee";
-      //   startScreenText.style.zIndex = "2";
-
-      //   bgElementStart.appendChild(startScreenText);
     }
   }, 1000);
 }
@@ -114,6 +96,7 @@ const barUpsideWrapElement = document.querySelector(".bar_upside_wrap");
 barUpsideWrapElement.style.display = "flex";
 barUpsideWrapElement.style.justifyContent = "space-between";
 barUpsideWrapElement.style.alignItems = "center";
+barUpsideWrapElement.style.color = "white";
 
 const barUpsideElement = document.querySelector(".bar_upside");
 barUpsideElement.style.position = "fixed";
@@ -147,7 +130,11 @@ const bodyElement = document.querySelector("body");
 bodyElement.style.display = "flex";
 bodyElement.style.height = "100vh";
 bodyElement.style.fontSize = "2em";
-bodyElement.style.backgroundColor = "#eee";
+bodyElement.style.background =
+  'url("https://media2.giphy.com/media/NKEt9elQ5cR68/giphy.gif?cid=ecf05e47rh1dbp4ydpdpnyi25f85xrqaty9vw7xns8vawi2a&rid=giphy.gif&ct=g") no-repeat';
+bodyElement.style.backgroundSize = "cover";
+bodyElement.style.backdropFilter = "blur(20px) brightness(40%)";
+bodyElement.style.zIndex = "0";
 
 const switchElement = document.querySelector(".switch");
 switchElement.style.position = "relative";
@@ -290,5 +277,3 @@ shoulderLeft.addEventListener("mouseup", shoulderLeftActionCancel);
 
 shoulderRight.addEventListener("mousedown", shoulderRightAction);
 shoulderRight.addEventListener("mouseup", shoulderRightActionCancel);
-
-// 양쪽이 동시에 움직이는 문제 해결 필요
